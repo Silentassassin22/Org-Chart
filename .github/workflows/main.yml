@@ -47,7 +47,7 @@ jobs:
         uses: microsoft/setup-msbuild@v1
 
       - name: MSBuild
-        working-directory: ${{ env.msbuildtarget }}
+        working-directory: Solution
         run: msbuild /restore /t:rebuild
 
       - name: Managed Solution Artifact ${{ steps.solution-unique-name.outputs.info }}_${{ steps.solution-version.outputs.info }}_managed.zip
